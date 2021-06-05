@@ -24,6 +24,39 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
+
+    <nav class="navbar is-primary">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-4">Cliqr</h1>
+        <% end %>
+      </div>
+      <a role="button" class="navbar-burger" aria-label="menu" data-target="navbarExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div id="navbarExample" class="navbar-menu">
+
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <div class="navbar-item">
+
+              <p class="control">
+                <%= link_to "New Post", new_post_path, class: "button is-info" %>
+              </p>
+              <p class="control">
+                <%= link_to "Sign Up", new_user_registration_path, class: "button is-primary" %>
+              </p>
+              <p class="control">
+                <%= link_to "Log In", new_user_session_path, class: "button is-info" %>
+              </p>
+
+            </div>
+        </div>
+      </div>
+    </nav>  
  
 
 
