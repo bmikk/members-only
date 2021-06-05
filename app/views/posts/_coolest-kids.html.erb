@@ -1,0 +1,20 @@
+<div class="column is-one-quarter is-mobile">
+  <p class="title is-5">Stay out. Only cool kids can join this Cliq.</p> 
+
+  <nav class="panel">
+    <p class="panel-heading">Coolest Kids</p>
+    <% @users = User.all %>
+    <% @users.each do |user| %>
+      <% if user_signed_in? %>
+        <a class="panel-block">
+          <%= user.name %>
+        </a>
+      <% else %>
+        <a class="panel-block">
+          Anonymous
+        </a>
+      <% end %>
+    <% end %>
+
+  </nav>
+</div> 
