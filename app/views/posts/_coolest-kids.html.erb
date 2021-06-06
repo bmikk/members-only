@@ -17,7 +17,7 @@
     <% end %>
     
     <p class="panel-heading">Coolest Kids</p>
-    <% @top_users = Post.joins(:user).group("username").count %>
+    <% @top_users = Post.joins(:user).group("username").order("count_all DESC").count %>
     <% @top_users.each do |user| %>
       <% if user_signed_in? %>
         <a class="panel-block">
