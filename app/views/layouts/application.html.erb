@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MembersOnly</title>
+    <title>Cliqr</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -48,7 +48,7 @@
                   <%= link_to current_user.name, edit_user_registration_path, class: "button is-primary" %>
                 </p>
                 <p class="control">
-                  <%= link_to "New Post", new_post_path, class: "button is-info" %>
+                  <%= link_to "New Post", new_post_path, class: "button is-primary is-inverted" %>
                 </p>
                 <p>
                   <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "button is-info" %>
